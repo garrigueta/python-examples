@@ -1,13 +1,13 @@
 import numpy as np
 from timeit import default_timer as timer
-from numbapro import vectorize
+from numba import cuda
 from ply.cpp import xrange
 
 
-@vecotrize(["float32(float32, float32)"], target='gpu')
-def vectoradd(a, b):
+@cuda.jit
+def vectoradd(a, b, c):
     for i in xrange(a.size):
-        return a + b
+        c[i] = a[i] + b[i]
 
 
 def main():
@@ -18,7 +18,7 @@ def main():
     C = np.zeros(N, dtype=np.float32)
 
     start = timer()
-    C = vectoradd(A, B)
+    vectoradd(A, B, C)
     vectored_time = timer() - start
 
     print("C[:5] = " + str(C[:5]))
