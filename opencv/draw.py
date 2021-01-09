@@ -14,7 +14,7 @@ import numpy as np
 #cv.imshow('Red Zone', blank)
 
 #draw rectange
-img = cv.imread('C:\git\PyScripts\opencv\images\cat2.jpg')
+img = cv.imread('opencv/images/cat2.jpg')
 blank = np.zeros((500,500,3), dtype='uint8')
 blank[200:300, 300:400] = 255,0,0
 cv.rectangle(blank, (0,0), (blank.shape[1]//2,blank.shape[0]//2), (0,255,0), thickness=cv.FILLED)

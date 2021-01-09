@@ -17,7 +17,7 @@ def rescaleFrame(frame, scale=0.5):
 cv.waitKey(0)
 
 #load video
-capture = cv.VideoCapture("C:\git\PyScripts\opencv\\videos\\fog1.mp4")
+capture = cv.VideoCapture("opencv/videos/fog1.mp4")
 
 while   True:
     isTrue, frame = capture.read()
