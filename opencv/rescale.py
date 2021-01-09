@@ -1,6 +1,13 @@
 import cv2 as cv
 
+def changeRes(width, height):
+    #for live video purposes
+    capture.set(3, width)
+    capture.set(4, height)
+
+
 def rescaleFrame(frame, scale=0.5):
+    # images, videos and live video
     width = int(frame.shape[1] * scale)
     height = int(frame.shape[0] * scale)
     dimensions = (width,height)
