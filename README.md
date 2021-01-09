@@ -9,3 +9,12 @@ List of examples by area:
     - opencv
     - QLearning
     - web server
+
+Required external libraries:
+
+    - numpy
+    - opencv-contrib-python
+    - caer
+    - matplotlib
+    - gym
+    - pyopengl
