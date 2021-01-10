@@ -18,3 +18,5 @@ Required external libraries:
     - matplotlib
     - gym
     - pyopengl
+    - common
+    - primesense
