@@ -4,6 +4,8 @@ import time
 midiout = rtmidi.MidiOut()
 ports = midiout.get_ports()
 print(ports)
+midiout.open_port(0)
+
 
 def send_notes(pitch=60, repeat=4):
     for note in range(repeat):

@@ -1,6 +1,10 @@
-mingus
-MIDIUtil
+python-rtmidi
 numpy
 matplotlib
-wavfile
 scipy
+pandas
+midiutil
+opencv-python
+mediapipe
+pygame
+pyaudio

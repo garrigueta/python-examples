@@ -1,8 +1,0 @@
-python-rtmidi
-numpy
-matplotlib
-scipy
-pandas
-midiutil
-opencv-python
-mediapipe
