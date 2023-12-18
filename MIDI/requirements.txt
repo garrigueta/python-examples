@@ -3,3 +3,4 @@ MIDIUtil
 numpy
 matplotlib
 wavfile
+scipy
