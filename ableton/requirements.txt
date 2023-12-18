@@ -6,3 +6,5 @@ pandas
 midiutil
 opencv-python
 mediapipe
+pygame
+pyaudio
