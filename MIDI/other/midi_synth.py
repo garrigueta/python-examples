@@ -36,13 +36,14 @@ try:
 
         if midi_input.poll():
             for event in midi_input.read(num_events=8):
-                (status, note, vel, _), _  = event
+                (status, note, vel, _), _ = event
                 print(event)
                 if status == 0x80 and note in notes_dict:
                     del notes_dict[note]
                 elif status == 0x90 and note not in notes_dict:
                     freq = midi.midi_to_frequency(note)
-                    notes_dict[note] = get_sin_oscillator(freq=freq, amp=vel/127)
+                    notes_dict[note] = get_sin_oscillator(
+                        freq=freq, amp=vel/127)
 
 except KeyboardInterrupt:
     stream.stop_stream()

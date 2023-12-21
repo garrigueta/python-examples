@@ -1,4 +1,4 @@
-from src.utils import *
+from utils import *
 from NetworkManager import *
 import ipaddress
 
