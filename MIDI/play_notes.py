@@ -1,22 +1,7 @@
-import rtmidi
-import time
+""" Send notes to MIDI device """
+from midi_utils import send_notes, midiout, init_rtmidi
 
-midiout = rtmidi.MidiOut()
-ports = midiout.get_ports()
-print(ports)
-midiout.open_port(0)
-
-
-def send_notes(pitch=60, repeat=4):
-    for note in range(repeat):
-        note_on = [0x90, pitch, 80]
-        note_off = [0x80, pitch, 0]
-        midiout.send_message(note_on)
-        time.sleep(0.5)
-        midiout.send_message(note_off)
-
-
-tempo = 0.4
+init_rtmidi(port=0)
 
 with midiout:
     for bar in range(4):
